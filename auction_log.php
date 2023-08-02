@@ -6,7 +6,7 @@
     <div class="top"></div>
     <div class="bottom"></div>
     <div class="center">
-      <h2>Enter Farmer ID</h2>
+      <h2>Bid.it</h2>
       <form action="" method="post"> <!-- Form submission to login.php -->
         <input class="input" type="number" name="farmer_id" placeholder="farmer-id">
         <input class="input" type="number" name="phone_number" placeholder="phone number">
