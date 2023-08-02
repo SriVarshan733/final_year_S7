@@ -23,6 +23,18 @@ SET time_zone = "+00:00";
 
 -- --------------------------------------------------------
 
+CREATE TABLE `auction_log` (
+  `farmer_id` BIGINT NOT NULL,
+  `number` BIGINT NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+ALTER TABLE `auction_log`
+  ADD PRIMARY KEY (`farmer_id`);
+
+INSERT INTO `auction_log` (`farmer_id`, `number`) VALUES
+(1234567891234567, 9999988888);
+
+
 --
 -- Table structure for table `bids`
 --
