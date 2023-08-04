@@ -37,6 +37,7 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=home">Home</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="auction_log.php">Post Auction</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=market">Demand</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=cart">Cart</a></li>
                         <?php if(isset($_SESSION['login_id'])): ?>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="admin/ajax.php?action=logout2"><?php echo "Welcome ".$_SESSION['login_name'] ?> <i class="fa fa-power-off"></i></a></li>
                       <?php else: ?>
