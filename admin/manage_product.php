@@ -133,9 +133,26 @@ img#img_path-field{
 					<div class="form-group row">
 						<div class="col-md-4">
 							<label for="" class="control-label">Name</label>
+							<input type="text" class="form-control" name="username"  value="<?php echo isset($username) ? $username :'' ?>" required>
+						</div>
+					</div>
+					<div class="form-group row">
+						<div class="col-md-4">
+							<label for="" class="control-label">Contact number</label>
+							<input type="number" class="form-control" name="contact"  value="<?php echo isset($contact) ? $contact :'' ?>" required>
+						</div>
+					</div>
+					<div class="form-group row">
+						<div class="col-md-4">
+							<label for="" class="control-label">Address</label>
+							<input type="text" class="form-control" name="address"  value="<?php echo isset($address) ? $address :'' ?>" required>
+						</div>
+					</div>
+					<div class="form-group row">
+						<div class="col-md-4">
+							<label for="" class="control-label">Product Name</label>
 							<input type="text" class="form-control" name="name"  value="<?php echo isset($name) ? $name :'' ?>" required>
 						</div>
-					
 					</div>
 					<div class="form-group row">
 						<div class="col-md-4">
