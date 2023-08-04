@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/?size=512&id=ME2aFAiY2j6h&format=png">
     <?php
     session_start();
     include('admin/db_connect.php');
