@@ -94,8 +94,9 @@ div#login-right::before {
   		<div id="login-right">
   			<div class="card col-md-8">
   				<div class="card-body">
-  						
-  					<form id="login-form" >
+				  <center><h2><img src="https://img.icons8.com/?size=512&id=ME2aFAiY2j6h&format=png" width="40px"  alt="Mountains">Bid.it</h2></center>
+  				<br>	
+				  <form id="login-form" >
   						<div class="form-group">
   							<label for="username" class="control-label">Username</label>
   							<input type="text" id="username" name="username" class="form-control">
