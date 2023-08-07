@@ -126,5 +126,7 @@ if($action == "get_pdetails"){
 	if($get)
 		echo $get;
 }
+
+
 ob_end_flush();
 ?>
