@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   if ($result->num_rows > 0) {
     // Login successful, redirect to post_auction.php
-    header("Location: index.php?page=post_auction");
+    header("Location: index.php?page=user_products");
     exit;
   } else {
     // Login failed, display an error message or handle it accordingly
