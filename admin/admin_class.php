@@ -223,6 +223,8 @@ Class Action {
 				}
 			}
 			}
+
+		$data .= ", seller_authid='{$_SESSION['login_id']}' ";
 		
 		if(empty($id)){
 			$save = $this->db->query("INSERT INTO products set $data");
