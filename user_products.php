@@ -111,7 +111,7 @@
 		
 	})
 	$('.edit_product').click(function(){
-		location.href ="index.php?page=manage_product&id="+$(this).attr('data-id')
+		location.href ="index.php?page=post_auction&id="+$(this).attr('data-id')
 		
 	})
 	$('.delete_product').click(function(){
