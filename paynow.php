@@ -66,7 +66,7 @@ input:focus{border-bottom:1px solid #1abc9c; outline:none;}
 ?>
   <div class="cardpay">
   <input type="hidden" id="name_<?php echo $row['product_id']; ?>" value="<?php echo $row['uname']; ?>">
-<input type="hidden" id="amt_<?php echo $row['product_id']; ?>" value="<?php echo $row['bid_amount']; ?>">
+  <input type="hidden" id="amt_<?php echo $row['product_id']; ?>" value="<?php echo $row['bid_amount']; ?>">
     <button onclick="pay_now('<?php echo $row['product_id']; ?>')" class="proceed"><svg class="sendicon" width="24" height="24" viewBox="0 0 24 24">
   <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
 </svg></button>
@@ -80,7 +80,7 @@ input:focus{border-bottom:1px solid #1abc9c; outline:none;}
   </div>
   <div class="receipt">
     <div class="col"><p>Cost:</p>
-    <h2 class="cost">$400</h2><br>
+    <h2 class="cost">₹400</h2><br>
     <p>Name:</p>
     <h2 class="seller">Codedgar</h2>
     </div>
