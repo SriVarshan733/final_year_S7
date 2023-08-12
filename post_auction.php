@@ -121,6 +121,12 @@ img#img_path-field{
 		max-height: 15vh;
 		max-width: 8vw;
 	}
+
+	.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
 </style>
 <div class="container-fluid">
 	<div class="col-lg-12">
@@ -213,7 +219,7 @@ img#img_path-field{
 </div>
 <div class="imgF" style="display: none " id="img-clone">
 			<span class="rem badge badge-primary" onclick="rem_func($(this))"><i class="fa fa-times"></i></span>
-	</div>
+</div>
 <script>
 	$('#payment_status').on('change keypress keyup',function(){
 		if($(this).prop('checked') == true){
