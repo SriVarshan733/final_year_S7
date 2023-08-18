@@ -45,16 +45,17 @@ CREATE TABLE `bids` (
   `product_id` int(30) NOT NULL,
   `bid_amount` float NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT 1 COMMENT '1=bid,2=confirmed,3=cancelled',
-  `date_created` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `date_created` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `seller_id` BIGINT(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `bids`
 --
 
-INSERT INTO `bids` (`id`, `user_id`, `product_id`, `bid_amount`, `status`, `date_created`) VALUES
-(2, 5, 1, 7500, 1, '2020-10-27 14:18:50'),
-(4, 5, 3, 155000, 1, '2020-10-27 16:37:29');
+INSERT INTO `bids` (`id`, `user_id`, `product_id`, `bid_amount`, `status`, `date_created`, `seller_id`) VALUES
+(2, 5, 1, 7500, 1, '2020-10-27 14:18:50', 0),
+(4, 5, 3, 155000, 1, '2020-10-27 16:37:29', 0);
 
 -- --------------------------------------------------------
 
@@ -96,16 +97,19 @@ CREATE TABLE `products` (
   `regular_price` float NOT NULL,
   `bid_end_datetime` datetime NOT NULL,
   `img_fname` text NOT NULL,
-  `date_created` datetime NOT NULL DEFAULT current_timestamp()
+  `date_created` datetime NOT NULL DEFAULT current_timestamp(),
+  `buyer_id` BIGINT(20) NOT NULL,
+  `seller_authId` BIGINT(20) NOT NULL,
+  `bid_amt` BIGINT(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `category_id`, `name`, `description`, `start_bid`, `regular_price`, `bid_end_datetime`, `img_fname`, `date_created`) VALUES
-(1, 5, 'Sample Smart Phone', 'Sample only', 7000, 7000, '2020-10-27 19:00:00', '1.jpg', '2020-10-27 09:50:54'),
-(3, 1, 'Gadget Package', 'Sample ', 150000, 15000, '2020-10-27 17:00:00', '3.jpg', '2020-10-27 09:59:39');
+INSERT INTO `products` (`id`, `category_id`, `name`, `description`, `start_bid`, `regular_price`, `bid_end_datetime`, `img_fname`, `date_created`, `buyer_id`, `seller_authId`, `bid_amt`) VALUES
+(1, 5, 'Sample Smart Phone', 'Sample only', 7000, 7000, '2020-10-27 19:00:00', '1.jpg', '2020-10-27 09:50:54',0 ,0 ,0),
+(3, 1, 'Gadget Package', 'Sample ', 150000, 15000, '2020-10-27 17:00:00', '3.jpg', '2020-10-27 09:59:39',0,0,0);
 
 -- --------------------------------------------------------
 
