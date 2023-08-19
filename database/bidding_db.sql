@@ -85,6 +85,7 @@ INSERT INTO `categories` (`id`, `name`) VALUES
 
 CREATE TABLE `products` (
   `id` int(30) NOT NULL,
+  `farmer-id` BIGINT(30) NOT NULL,
   `contact` BIGINT(20) NOT NULL,
   `address` TEXT NOT NULL,
   `username` VARCHAR(200) NOT NULL,
