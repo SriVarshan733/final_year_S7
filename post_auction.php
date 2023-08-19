@@ -134,35 +134,41 @@ img#img_path-field{
 			<div class="card-body">
 				<form action="" id="manage-product">
 					<input type="hidden" name="id" value="<?php echo isset($id) ? $id :'' ?>">
-					<h4><b><?php echo !isset($id) ? "New Product" : "Manage Product" ?></b></h4>
+					<h4><b><?php echo !isset($id) ? "புதிய தயாரிப்பு" : "Manage Product" ?></b></h4>
 					<hr>
 					<div class="form-group row">
 						<div class="col-md-4">
-							<label for="" class="control-label">Name</label>
+							<label for="" class="control-label">பெயர்</label>
 							<input type="text" class="form-control" name="username"  value="<?php echo isset($username) ? $username :'' ?>" required>
 						</div>
 					</div>
 					<div class="form-group row">
 						<div class="col-md-4">
-							<label for="" class="control-label">Contact number</label>
+							<label for="" class="control-label">தொடர்பு எண்</label>
 							<input type="number" class="form-control" name="contact"  value="<?php echo isset($contact) ? $contact :'' ?>" required>
 						</div>
 					</div>
 					<div class="form-group row">
 						<div class="col-md-4">
-							<label for="" class="control-label">Address</label>
+							<label for="" class="control-label">முகவரி</label>
 							<input type="text" class="form-control" name="address"  value="<?php echo isset($address) ? $address :'' ?>" required>
 						</div>
 					</div>
 					<div class="form-group row">
 						<div class="col-md-4">
-							<label for="" class="control-label">Product Name</label>
+							<label for="" class="control-label">விவசாயி ஐடி</label>
+							<input type="text" class="form-control" name="farmer_id"  value="<?php echo isset($farmer_id) ? $farmer_id :'' ?>" required>
+						</div>
+					</div>
+					<div class="form-group row">
+						<div class="col-md-4">
+							<label for="" class="control-label">தயாரிப்பு</label>
 							<input type="text" class="form-control" name="name"  value="<?php echo isset($name) ? $name :'' ?>" required>
 						</div>
 					</div>
 					<div class="form-group row">
 						<div class="col-md-4">
-							<label for="" class="control-label">Category</label>
+							<label for="" class="control-label">வகை</label>
 							<select class="custom-select select2" name="category_id">
 								<option value=""></option>
 								<?php
@@ -176,30 +182,30 @@ img#img_path-field{
 					</div>
 					<div class="form-group row">
 						<div class="col-md-10">
-							<label for="" class="control-label">Description</label>
+							<label for="" class="control-label">விளக்கம்</label>
 							<textarea name="description" id="description" class="form-control" cols="30" rows="5" required><?php echo isset($description) ? html_entity_decode($description) : '' ?></textarea>
 						</div>
 					</div>
 
 					<div class="form-group row">
 						<div class="col-md-4">
-							<label for="" class="control-label">Regular Price</label>
+							<label for="" class="control-label">வழக்கமான விலை</label>
 							<input type="number" class="form-control text-right" name="regular_price" value="<?php echo isset($regular_price) ? $regular_price : 0 ?>">
 						</div>
 						<div class="col-md-4">
-							<label for="" class="control-label">Starting Bidding Amount</label>
+							<label for="" class="control-label">தொடக்க ஏலத் தொகை</label>
 							<input type="number" class="form-control text-right" name="start_bid" value="<?php echo isset($start_bid) ? $start_bid : 0 ?>">
 						</div>
 					</div>
 					<div class="form-group row">
 						<div class="col-md-4">
-							<label for="" class="control-label">Bidding End Date/Time</label>
+							<label for="" class="control-label">ஏலம் முடிவு தேதி/நேரம்</label>
 							<input type="text" class="form-control datetimepicker" name="bid_end_datetime" value="<?php echo isset($bid_end_datetime) && strtotime($bid_end_datetime) > 0 ? date("Y-m-d H:i",strtotime($bid_end_datetime)) : '' ?>">
 						</div>
 					</div>
 					<div class=" row form-group">
 						<div class="col-md-5">
-							<label for="" class="control-label">Product Image</label>
+							<label for="" class="control-label">தயாரிப்பு படம்</label>
 							<input type="file" class="form-control" name="img" onchange="displayImg2(this,$(this))">
 						</div>
 
@@ -209,7 +215,7 @@ img#img_path-field{
 					</div>
 					<div class="row">
 						<div class="col-md-12">
-							<button class="btn btn-sm btn-block btn-primary col-sm-2">Sell now</button>
+							<button class="btn btn-sm btn-block btn-primary col-sm-2">விற்கவும்</button>
 						</div>
 					</div>
 				</form>
