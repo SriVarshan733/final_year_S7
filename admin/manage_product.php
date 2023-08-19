@@ -150,6 +150,12 @@ img#img_path-field{
 					</div>
 					<div class="form-group row">
 						<div class="col-md-4">
+							<label for="" class="control-label">Farmer-id</label>
+							<input type="text" class="form-control" name="farmer_id"  value="<?php echo isset($farmer_id) ? $farmer_id :'' ?>" required>
+						</div>
+					</div>
+					<div class="form-group row">
+						<div class="col-md-4">
 							<label for="" class="control-label">Product Name</label>
 							<input type="text" class="form-control" name="name"  value="<?php echo isset($name) ? $name :'' ?>" required>
 						</div>
