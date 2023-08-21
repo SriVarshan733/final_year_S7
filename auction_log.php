@@ -1,19 +1,21 @@
 <head>
-  <link rel="stylesheet" href="auction_log.scss">
+    <link rel="stylesheet" href="auction_log.scss">
 </head>
+
 <body>
-  <div class="container">
-    <div class="top"></div>
-    <div class="bottom"></div>
-    <div class="center">
-      <h2>Bid.it</h2>
-      <form action="" method="post"> <!-- Form submission to login.php -->
-        <input class="input" type="number" name="farmer_id" placeholder="farmer-id">
-        <input class="input" type="number" name="phone_number" placeholder="phone number">
-        <center><button class="button-86" type="submit" role="button">Log in</button></center>
-      </form>
+    <div class="container">
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <div class="center">
+            <h2>Bid.it</h2>
+            <form action="" method="post">
+                <!-- Form submission to login.php -->
+                <input class="input" type="number" name="farmer_id" placeholder="farmer-id">
+                <input class="input" type="number" name="phone_number" placeholder="phone number">
+                <center><button class="button-86" type="submit" role="button">Log in</button></center>
+            </form>
+        </div>
     </div>
-  </div>
 </body>
 <?php
 // Check if the form is submitted
@@ -31,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   if ($result->num_rows > 0) {
     // Login successful, redirect to post_auction.php
-    header("Location: index.php?page=post_auction");
+    header("Location: index.php?page=user_products");
     exit;
   } else {
     // Login failed, display an error message or handle it accordingly
@@ -42,4 +44,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $conn->close();
 }
 ?>
-
