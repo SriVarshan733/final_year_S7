@@ -121,12 +121,6 @@ img#img_path-field{
 		max-height: 15vh;
 		max-width: 8vw;
 	}
-
-	.button-container {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 10px;
-  }
 </style>
 <div class="container-fluid">
 	<div class="col-lg-12">
@@ -134,41 +128,41 @@ img#img_path-field{
 			<div class="card-body">
 				<form action="" id="manage-product">
 					<input type="hidden" name="id" value="<?php echo isset($id) ? $id :'' ?>">
-					<h4><b><?php echo !isset($id) ? "புதிய தயாரிப்பு" : "Manage Product" ?></b></h4>
+					<h4><b><?php echo !isset($id) ? "New Product" : "Manage Product" ?></b></h4>
 					<hr>
 					<div class="form-group row">
 						<div class="col-md-4">
-							<label for="" class="control-label">பெயர்</label>
+							<label for="" class="control-label">Name</label>
 							<input type="text" class="form-control" name="username"  value="<?php echo isset($username) ? $username :'' ?>" required>
 						</div>
 					</div>
 					<div class="form-group row">
 						<div class="col-md-4">
-							<label for="" class="control-label">தொடர்பு எண்</label>
+							<label for="" class="control-label">Contact number</label>
 							<input type="number" class="form-control" name="contact"  value="<?php echo isset($contact) ? $contact :'' ?>" required>
 						</div>
 					</div>
 					<div class="form-group row">
 						<div class="col-md-4">
-							<label for="" class="control-label">முகவரி</label>
+							<label for="" class="control-label">Address</label>
 							<input type="text" class="form-control" name="address"  value="<?php echo isset($address) ? $address :'' ?>" required>
 						</div>
 					</div>
 					<div class="form-group row">
 						<div class="col-md-4">
-							<label for="" class="control-label">விவசாயி ஐடி</label>
+							<label for="" class="control-label">Farmer-id</label>
 							<input type="text" class="form-control" name="farmer_id"  value="<?php echo isset($farmer_id) ? $farmer_id :'' ?>" required>
 						</div>
 					</div>
 					<div class="form-group row">
 						<div class="col-md-4">
-							<label for="" class="control-label">தயாரிப்பு</label>
+							<label for="" class="control-label">Product Name</label>
 							<input type="text" class="form-control" name="name"  value="<?php echo isset($name) ? $name :'' ?>" required>
 						</div>
 					</div>
 					<div class="form-group row">
 						<div class="col-md-4">
-							<label for="" class="control-label">வகை</label>
+							<label for="" class="control-label">Category</label>
 							<select class="custom-select select2" name="category_id">
 								<option value=""></option>
 								<?php
@@ -179,33 +173,34 @@ img#img_path-field{
 								<?php endwhile; ?>
 							</select>
 						</div>
+						
 					</div>
 					<div class="form-group row">
 						<div class="col-md-10">
-							<label for="" class="control-label">விளக்கம்</label>
+							<label for="" class="control-label">Description</label>
 							<textarea name="description" id="description" class="form-control" cols="30" rows="5" required><?php echo isset($description) ? html_entity_decode($description) : '' ?></textarea>
 						</div>
 					</div>
 
 					<div class="form-group row">
 						<div class="col-md-4">
-							<label for="" class="control-label">வழக்கமான விலை</label>
+							<label for="" class="control-label">Regular Price</label>
 							<input type="number" class="form-control text-right" name="regular_price" value="<?php echo isset($regular_price) ? $regular_price : 0 ?>">
 						</div>
 						<div class="col-md-4">
-							<label for="" class="control-label">தொடக்க ஏலத் தொகை</label>
+							<label for="" class="control-label">Starting Bidding Amount</label>
 							<input type="number" class="form-control text-right" name="start_bid" value="<?php echo isset($start_bid) ? $start_bid : 0 ?>">
 						</div>
 					</div>
 					<div class="form-group row">
 						<div class="col-md-4">
-							<label for="" class="control-label">ஏலம் முடிவு தேதி/நேரம்</label>
+							<label for="" class="control-label">Bidding End Date/Time</label>
 							<input type="text" class="form-control datetimepicker" name="bid_end_datetime" value="<?php echo isset($bid_end_datetime) && strtotime($bid_end_datetime) > 0 ? date("Y-m-d H:i",strtotime($bid_end_datetime)) : '' ?>">
 						</div>
 					</div>
 					<div class=" row form-group">
 						<div class="col-md-5">
-							<label for="" class="control-label">தயாரிப்பு படம்</label>
+							<label for="" class="control-label">Product Image</label>
 							<input type="file" class="form-control" name="img" onchange="displayImg2(this,$(this))">
 						</div>
 
@@ -215,7 +210,7 @@ img#img_path-field{
 					</div>
 					<div class="row">
 						<div class="col-md-12">
-							<button class="btn btn-sm btn-block btn-primary col-sm-2">விற்கவும்</button>
+							<button class="btn btn-sm btn-block btn-primary col-sm-2"> Save</button>
 						</div>
 					</div>
 				</form>
@@ -225,7 +220,7 @@ img#img_path-field{
 </div>
 <div class="imgF" style="display: none " id="img-clone">
 			<span class="rem badge badge-primary" onclick="rem_func($(this))"><i class="fa fa-times"></i></span>
-</div>
+	</div>
 <script>
 	$('#payment_status').on('change keypress keyup',function(){
 		if($(this).prop('checked') == true){
@@ -241,7 +236,7 @@ img#img_path-field{
 		start_load()
 		$('#msg').html('')
 		$.ajax({
-			url:'admin/ajax.php?action=save_product',
+			url:'ajax.php?action=save_product',
 			data: new FormData($(this)[0]),
 		    cache: false,
 		    contentType: false,
@@ -252,7 +247,7 @@ img#img_path-field{
 				if(resp==1){
 					alert_toast("Data successfully saved",'success')
 					setTimeout(function(){
-						location.href = "index.php?page=home"
+						location.href = "index.php?page=products"
 					},1500)
 
 				}
