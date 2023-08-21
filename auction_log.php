@@ -8,9 +8,9 @@
     <div class="center">
       <h2>Bid.it</h2>
       <form action="" method="post"> <!-- Form submission to login.php -->
-        <input class="input" type="number" name="farmer_id" placeholder="farmer-id">
-        <input class="input" type="number" name="phone_number" placeholder="phone number">
-        <center><button class="button-86" type="submit" role="button">Log in</button></center>
+        <input class="input" type="number" name="farmer_id" value="farmer_id" placeholder="farmer-id">
+        <input class="input" type="number" name="phone_number"  placeholder="phone number">
+        <center><button class="button-86" type="submit" value="login" role="button">Log in</button></center>
       </form>
     </div>
   </div>
@@ -41,5 +41,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Close the database connection
   $conn->close();
 }
+
 ?>
 
