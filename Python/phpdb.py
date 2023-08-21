@@ -47,7 +47,7 @@ def checkChangeTheStatus(conn, listOfProductId):
                 winerId = tuple_with_highest_price[1]
                 bidAmt = tuple_with_highest_price[3]
                 newStatus = 2
-                update_query = f"UPDATE bids SET status = {newStatus} WHERE id = {winerId}"
+                update_query = f"UPDATE bids SET status = {newStatus} WHERE user_id = {winerId}"
                 cursor.execute(update_query)
                 
                 update_query1 = f"UPDATE bids SET seller_id = {sellerId} WHERE id = {winerId}"
