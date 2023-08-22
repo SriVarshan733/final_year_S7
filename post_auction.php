@@ -236,7 +236,7 @@ img#img_path-field{
 		start_load()
 		$('#msg').html('')
 		$.ajax({
-			url:'ajax.php?action=save_product',
+			url:'admin/ajax.php?action=save_product',
 			data: new FormData($(this)[0]),
 		    cache: false,
 		    contentType: false,
