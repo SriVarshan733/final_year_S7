@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $entered_phone_number = $_POST["phone_number"];
 
   // Database connection
-  $conn = new mysqli('database-1.cwa1v3hdvy5b.us-east-1.rds.amazonaws.com', 'admin', 'admin123', 'bidding') or die("Could not connect to mysql" . mysqli_error($con));
+  $conn = new mysqli('localhost', 'root', '', 'bidding-test_db') or die("Could not connect to mysql" . mysqli_error($con));
 
   // Check if the entered credentials exist in the database
   $query = "SELECT * FROM auction_log WHERE farmer_id = '$entered_farmer_id' AND number = '$entered_phone_number'";
