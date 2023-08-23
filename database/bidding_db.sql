@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `bidding_db`
+-- Database: `bidding-test_db`
 --
 
 -- --------------------------------------------------------
@@ -104,8 +104,9 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `category_id`, `name`, `description`, `start_bid`, `regular_price`, `bid_end_datetime`, `img_fname`, `date_created`) VALUES
-(1, 5, 'Sample Smart Phone', 'Sample only', 7000, 7000, '2020-10-27 19:00:00', '1.jpg', '2020-10-27 09:50:54'),
-(3, 1, 'Gadget Package', 'Sample ', 150000, 15000, '2020-10-27 17:00:00', '3.jpg', '2020-10-27 09:59:39');
+(1, 5, 'Sample Smart Phone', 'Sample only', 7000, 7000, '2020-10-27 19:00:00', '1.jpg', '2020-10-27 09:50:54',0 ,0 ,0),
+(3, 1, 'Gadget Package', 'Sample ', 150000, 15000, '2020-10-27 17:00:00', '3.jpg', '2020-10-27 09:59:39',0,0,0);
+
 
 -- --------------------------------------------------------
 
